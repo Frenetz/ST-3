@@ -1,4 +1,4 @@
-// Copyright 2021 GHA Test Team
+// Copyright 2024 Khodyrev Fedor
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
