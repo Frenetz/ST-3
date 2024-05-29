@@ -62,20 +62,20 @@ TEST_F(TimedDoorTest, first_door_closed_test) {
     EXPECT_FALSE(door.isDoorOpened());
 }
 
-TEST_F(TimedDoorTest, unlock_door_twice_test) {
-    door.unlock();
-    EXPECT_THROW(door.unlock(), std::logic_error);
-}
-
 TEST_F(TimedDoorTest, opened_exeption_test) {
     door.unlock();
     EXPECT_THROW(door.throwState(), std::runtime_error);
 }
 
-TEST_F(TimedDoorTest, close_before_test) {
-    EXPECT_NO_THROW(door.throwState());
+TEST_F(TimedDoorTest, unlock_door_twice_test) {
+    door.unlock();
+    EXPECT_THROW(door.unlock(), std::logic_error);
 }
 
 TEST_F(TimedDoorTest, lock_door_twice_test) {
     EXPECT_THROW(door.lock(), std::logic_error);
+}
+
+TEST_F(TimedDoorTest, close_before_test) {
+    EXPECT_NO_THROW(door.throwState());
 }
